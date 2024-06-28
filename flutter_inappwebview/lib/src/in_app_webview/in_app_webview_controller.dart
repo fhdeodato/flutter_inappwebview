@@ -41,8 +41,7 @@ class InAppWebViewController {
   final PlatformInAppWebViewController platform;
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.webStorage}
-  WebStorage get webStorage =>
-      WebStorage.fromPlatform(platform: platform.webStorage);
+  WebStorage get webStorage => WebStorage.fromPlatform(platform: platform.webStorage);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.getUrl}
   Future<WebUri?> getUrl() => platform.getUrl();
@@ -62,8 +61,7 @@ class InAppWebViewController {
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.loadUrl}
   Future<void> loadUrl(
           {required URLRequest urlRequest,
-          @Deprecated('Use allowingReadAccessTo instead')
-          Uri? iosAllowingReadAccessTo,
+          @Deprecated('Use allowingReadAccessTo instead') Uri? iosAllowingReadAccessTo,
           WebUri? allowingReadAccessTo}) =>
       platform.loadUrl(
           urlRequest: urlRequest,
@@ -82,8 +80,7 @@ class InAppWebViewController {
           WebUri? baseUrl,
           @Deprecated('Use historyUrl instead') Uri? androidHistoryUrl,
           WebUri? historyUrl,
-          @Deprecated('Use allowingReadAccessTo instead')
-          Uri? iosAllowingReadAccessTo,
+          @Deprecated('Use allowingReadAccessTo instead') Uri? iosAllowingReadAccessTo,
           WebUri? allowingReadAccessTo}) =>
       platform.loadData(
           data: data,
@@ -115,8 +112,7 @@ class InAppWebViewController {
   Future<bool> canGoForward() => platform.canGoForward();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.goBackOrForward}
-  Future<void> goBackOrForward({required int steps}) =>
-      platform.goBackOrForward(steps: steps);
+  Future<void> goBackOrForward({required int steps}) => platform.goBackOrForward(steps: steps);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.canGoBackOrForward}
   Future<bool> canGoBackOrForward({required int steps}) =>
@@ -133,30 +129,25 @@ class InAppWebViewController {
   Future<void> stopLoading() => platform.stopLoading();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.evaluateJavascript}
-  Future<dynamic> evaluateJavascript(
-          {required String source, ContentWorld? contentWorld}) =>
+  Future<dynamic> evaluateJavascript({required String source, ContentWorld? contentWorld}) =>
       platform.evaluateJavascript(source: source, contentWorld: contentWorld);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.injectJavascriptFileFromUrl}
   Future<void> injectJavascriptFileFromUrl(
-          {required WebUri urlFile,
-          ScriptHtmlTagAttributes? scriptHtmlTagAttributes}) =>
+          {required WebUri urlFile, ScriptHtmlTagAttributes? scriptHtmlTagAttributes}) =>
       platform.injectJavascriptFileFromUrl(
           urlFile: urlFile, scriptHtmlTagAttributes: scriptHtmlTagAttributes);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.injectJavascriptFileFromAsset}
-  Future<dynamic> injectJavascriptFileFromAsset(
-          {required String assetFilePath}) =>
+  Future<dynamic> injectJavascriptFileFromAsset({required String assetFilePath}) =>
       platform.injectJavascriptFileFromAsset(assetFilePath: assetFilePath);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.injectCSSCode}
-  Future<void> injectCSSCode({required String source}) =>
-      platform.injectCSSCode(source: source);
+  Future<void> injectCSSCode({required String source}) => platform.injectCSSCode(source: source);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.injectCSSFileFromUrl}
   Future<void> injectCSSFileFromUrl(
-          {required WebUri urlFile,
-          CSSLinkHtmlTagAttributes? cssLinkHtmlTagAttributes}) =>
+          {required WebUri urlFile, CSSLinkHtmlTagAttributes? cssLinkHtmlTagAttributes}) =>
       platform.injectCSSFileFromUrl(
           urlFile: urlFile, cssLinkHtmlTagAttributes: cssLinkHtmlTagAttributes);
 
@@ -166,14 +157,11 @@ class InAppWebViewController {
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.addJavaScriptHandler}
   void addJavaScriptHandler(
-          {required String handlerName,
-          required JavaScriptHandlerCallback callback}) =>
-      platform.addJavaScriptHandler(
-          handlerName: handlerName, callback: callback);
+          {required String handlerName, required JavaScriptHandlerCallback callback}) =>
+      platform.addJavaScriptHandler(handlerName: handlerName, callback: callback);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.removeJavaScriptHandler}
-  JavaScriptHandlerCallback? removeJavaScriptHandler(
-          {required String handlerName}) =>
+  JavaScriptHandlerCallback? removeJavaScriptHandler({required String handlerName}) =>
       platform.removeJavaScriptHandler(handlerName: handlerName);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.hasJavaScriptHandler}
@@ -181,8 +169,7 @@ class InAppWebViewController {
       platform.hasJavaScriptHandler(handlerName: handlerName);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.takeScreenshot}
-  Future<Uint8List?> takeScreenshot(
-          {ScreenshotConfiguration? screenshotConfiguration}) =>
+  Future<Uint8List?> takeScreenshot({ScreenshotConfiguration? screenshotConfiguration}) =>
       platform.takeScreenshot(screenshotConfiguration: screenshotConfiguration);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.setOptions}
@@ -202,8 +189,7 @@ class InAppWebViewController {
   Future<InAppWebViewSettings?> getSettings() => platform.getSettings();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.getCopyBackForwardList}
-  Future<WebHistory?> getCopyBackForwardList() =>
-      platform.getCopyBackForwardList();
+  Future<WebHistory?> getCopyBackForwardList() => platform.getCopyBackForwardList();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.clearCache}
   @Deprecated("Use InAppWebViewController.clearAllCache instead")
@@ -211,13 +197,11 @@ class InAppWebViewController {
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.findAllAsync}
   @Deprecated("Use FindInteractionController.findAll instead")
-  Future<void> findAllAsync({required String find}) =>
-      platform.findAllAsync(find: find);
+  Future<void> findAllAsync({required String find}) => platform.findAllAsync(find: find);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.findNext}
   @Deprecated("Use FindInteractionController.findNext instead")
-  Future<void> findNext({required bool forward}) =>
-      platform.findNext(forward: forward);
+  Future<void> findNext({required bool forward}) => platform.findNext(forward: forward);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.clearMatches}
   @Deprecated("Use FindInteractionController.clearMatches instead")
@@ -232,13 +216,11 @@ class InAppWebViewController {
   Future<String> getTRexRunnerCss() => platform.getTRexRunnerCss();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.scrollTo}
-  Future<void> scrollTo(
-          {required int x, required int y, bool animated = false}) =>
+  Future<void> scrollTo({required int x, required int y, bool animated = false}) =>
       platform.scrollTo(x: x, y: y, animated: animated);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.scrollBy}
-  Future<void> scrollBy(
-          {required int x, required int y, bool animated = false}) =>
+  Future<void> scrollBy({required int x, required int y, bool animated = false}) =>
       platform.scrollBy(x: x, y: y, animated: animated);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.pauseTimers}
@@ -248,15 +230,12 @@ class InAppWebViewController {
   Future<void> resumeTimers() => platform.resumeTimers();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.printCurrentPage}
-  Future<PrintJobController?> printCurrentPage(
-      {PrintJobSettings? settings}) async {
-    final printJobControllerPlatform =
-        await platform.printCurrentPage(settings: settings);
+  Future<PrintJobController?> printCurrentPage({PrintJobSettings? settings}) async {
+    final printJobControllerPlatform = await platform.printCurrentPage(settings: settings);
     if (printJobControllerPlatform == null) {
       return null;
     }
-    return PrintJobController.fromPlatform(
-        platform: printJobControllerPlatform);
+    return PrintJobController.fromPlatform(platform: printJobControllerPlatform);
   }
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.getContentHeight}
@@ -270,8 +249,7 @@ class InAppWebViewController {
           {required double zoomFactor,
           @Deprecated('Use animated instead') bool? iosAnimated,
           bool animated = false}) =>
-      platform.zoomBy(
-          zoomFactor: zoomFactor, iosAnimated: iosAnimated, animated: animated);
+      platform.zoomBy(zoomFactor: zoomFactor, iosAnimated: iosAnimated, animated: animated);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.getOriginalUrl}
   Future<WebUri?> getOriginalUrl() => platform.getOriginalUrl();
@@ -287,26 +265,22 @@ class InAppWebViewController {
   Future<String?> getSelectedText() => platform.getSelectedText();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.getHitTestResult}
-  Future<InAppWebViewHitTestResult?> getHitTestResult() =>
-      platform.getHitTestResult();
+  Future<InAppWebViewHitTestResult?> getHitTestResult() => platform.getHitTestResult();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.requestFocus}
-  Future<void> requestFocus() => platform.requestFocus();
+  Future<bool> requestFocus() => platform.requestFocus();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.clearFocus}
   Future<void> clearFocus() => platform.clearFocus();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.setContextMenu}
-  Future<void> setContextMenu(ContextMenu? contextMenu) =>
-      platform.setContextMenu(contextMenu);
+  Future<void> setContextMenu(ContextMenu? contextMenu) => platform.setContextMenu(contextMenu);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.requestFocusNodeHref}
-  Future<RequestFocusNodeHrefResult?> requestFocusNodeHref() =>
-      platform.requestFocusNodeHref();
+  Future<RequestFocusNodeHrefResult?> requestFocusNodeHref() => platform.requestFocusNodeHref();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.requestImageRef}
-  Future<RequestImageRefResult?> requestImageRef() =>
-      platform.requestImageRef();
+  Future<RequestImageRefResult?> requestImageRef() => platform.requestImageRef();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.getMetaTags}
   Future<List<MetaTag>> getMetaTags() => platform.getMetaTags();
@@ -356,13 +330,10 @@ class InAppWebViewController {
           Map<String, dynamic> arguments = const <String, dynamic>{},
           ContentWorld? contentWorld}) =>
       platform.callAsyncJavaScript(
-          functionBody: functionBody,
-          arguments: arguments,
-          contentWorld: contentWorld);
+          functionBody: functionBody, arguments: arguments, contentWorld: contentWorld);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.saveWebArchive}
-  Future<String?> saveWebArchive(
-          {required String filePath, bool autoname = false}) =>
+  Future<String?> saveWebArchive({required String filePath, bool autoname = false}) =>
       platform.saveWebArchive(filePath: filePath, autoname: autoname);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.isSecureContext}
@@ -378,8 +349,7 @@ class InAppWebViewController {
   }
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.postWebMessage}
-  Future<void> postWebMessage(
-          {required WebMessage message, WebUri? targetOrigin}) =>
+  Future<void> postWebMessage({required WebMessage message, WebUri? targetOrigin}) =>
       platform.postWebMessage(message: message, targetOrigin: targetOrigin);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.addWebMessageListener}
@@ -409,8 +379,7 @@ class InAppWebViewController {
   Future<void> resume() => platform.resume();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.pageDown}
-  Future<bool> pageDown({required bool bottom}) =>
-      platform.pageDown(bottom: bottom);
+  Future<bool> pageDown({required bool bottom}) => platform.pageDown(bottom: bottom);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.pageUp}
   Future<bool> pageUp({required bool top}) => platform.pageUp(top: top);
@@ -434,8 +403,7 @@ class InAppWebViewController {
           IOSWKPDFConfiguration? iosWKPdfConfiguration,
           PDFConfiguration? pdfConfiguration}) =>
       platform.createPdf(
-          iosWKPdfConfiguration: iosWKPdfConfiguration,
-          pdfConfiguration: pdfConfiguration);
+          iosWKPdfConfiguration: iosWKPdfConfiguration, pdfConfiguration: pdfConfiguration);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.createWebArchiveData}
   Future<Uint8List?> createWebArchiveData() => platform.createWebArchiveData();
@@ -451,12 +419,10 @@ class InAppWebViewController {
       platform.setAllMediaPlaybackSuspended(suspended: suspended);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.closeAllMediaPresentations}
-  Future<void> closeAllMediaPresentations() =>
-      platform.closeAllMediaPresentations();
+  Future<void> closeAllMediaPresentations() => platform.closeAllMediaPresentations();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.requestMediaPlaybackState}
-  Future<MediaPlaybackState?> requestMediaPlaybackState() =>
-      platform.requestMediaPlaybackState();
+  Future<MediaPlaybackState?> requestMediaPlaybackState() => platform.requestMediaPlaybackState();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.isInFullscreen}
   Future<bool> isInFullscreen() => platform.isInFullscreen();
@@ -465,16 +431,14 @@ class InAppWebViewController {
   Future<void> clearFormData() => platform.clearFormData();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.getCameraCaptureState}
-  Future<MediaCaptureState?> getCameraCaptureState() =>
-      platform.getCameraCaptureState();
+  Future<MediaCaptureState?> getCameraCaptureState() => platform.getCameraCaptureState();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.setCameraCaptureState}
   Future<void> setCameraCaptureState({required MediaCaptureState state}) =>
       platform.setCameraCaptureState(state: state);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.getMicrophoneCaptureState}
-  Future<MediaCaptureState?> getMicrophoneCaptureState() =>
-      platform.getMicrophoneCaptureState();
+  Future<MediaCaptureState?> getMicrophoneCaptureState() => platform.getMicrophoneCaptureState();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.setMicrophoneCaptureState}
   Future<void> setMicrophoneCaptureState({required MediaCaptureState state}) =>
@@ -482,9 +446,7 @@ class InAppWebViewController {
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.loadSimulatedRequest}
   Future<void> loadSimulatedRequest(
-          {required URLRequest urlRequest,
-          required Uint8List data,
-          URLResponse? urlResponse}) =>
+          {required URLRequest urlRequest, required Uint8List data, URLResponse? urlResponse}) =>
       platform.loadSimulatedRequest(urlRequest: urlRequest, data: data);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.openDevTools}
@@ -493,19 +455,15 @@ class InAppWebViewController {
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.callDevToolsProtocolMethod}
   Future<dynamic> callDevToolsProtocolMethod(
           {required String methodName, Map<String, dynamic>? parameters}) =>
-      platform.callDevToolsProtocolMethod(
-          methodName: methodName, parameters: parameters);
+      platform.callDevToolsProtocolMethod(methodName: methodName, parameters: parameters);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.addDevToolsProtocolEventListener}
   Future<void> addDevToolsProtocolEventListener(
-          {required String eventName,
-          required Function(dynamic data) callback}) =>
-      platform.addDevToolsProtocolEventListener(
-          eventName: eventName, callback: callback);
+          {required String eventName, required Function(dynamic data) callback}) =>
+      platform.addDevToolsProtocolEventListener(eventName: eventName, callback: callback);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.removeDevToolsProtocolEventListener}
-  Future<void> removeDevToolsProtocolEventListener(
-          {required String eventName}) =>
+  Future<void> removeDevToolsProtocolEventListener({required String eventName}) =>
       platform.removeDevToolsProtocolEventListener(eventName: eventName);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.getIFrameId}
@@ -526,13 +484,11 @@ class InAppWebViewController {
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.setSafeBrowsingWhitelist}
   @Deprecated("Use setSafeBrowsingAllowlist instead")
   static Future<bool> setSafeBrowsingWhitelist({required List<String> hosts}) =>
-      PlatformInAppWebViewController.static()
-          .setSafeBrowsingWhitelist(hosts: hosts);
+      PlatformInAppWebViewController.static().setSafeBrowsingWhitelist(hosts: hosts);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.setSafeBrowsingAllowlist}
   static Future<bool> setSafeBrowsingAllowlist({required List<String> hosts}) =>
-      PlatformInAppWebViewController.static()
-          .setSafeBrowsingAllowlist(hosts: hosts);
+      PlatformInAppWebViewController.static().setSafeBrowsingAllowlist(hosts: hosts);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.getCurrentWebViewPackage}
   static Future<WebViewPackageInfo?> getCurrentWebViewPackage() =>
@@ -540,8 +496,7 @@ class InAppWebViewController {
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.setWebContentsDebuggingEnabled}
   static Future<void> setWebContentsDebuggingEnabled(bool debuggingEnabled) =>
-      PlatformInAppWebViewController.static()
-          .setWebContentsDebuggingEnabled(debuggingEnabled);
+      PlatformInAppWebViewController.static().setWebContentsDebuggingEnabled(debuggingEnabled);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.getVariationsHeader}
   static Future<String?> getVariationsHeader() =>
@@ -552,8 +507,7 @@ class InAppWebViewController {
       PlatformInAppWebViewController.static().isMultiProcessEnabled();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.disableWebView}
-  static Future<void> disableWebView() =>
-      PlatformInAppWebViewController.static().disableWebView();
+  static Future<void> disableWebView() => PlatformInAppWebViewController.static().disableWebView();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.handlesURLScheme}
   static Future<bool> handlesURLScheme(String urlScheme) =>
@@ -565,21 +519,18 @@ class InAppWebViewController {
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.clearAllCache}
   static Future<void> clearAllCache({bool includeDiskFiles = true}) =>
-      PlatformInAppWebViewController.static()
-          .clearAllCache(includeDiskFiles: includeDiskFiles);
+      PlatformInAppWebViewController.static().clearAllCache(includeDiskFiles: includeDiskFiles);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.tRexRunnerHtml}
   static Future<String> get tRexRunnerHtml =>
       PlatformInAppWebViewController.static().tRexRunnerHtml;
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.tRexRunnerCss}
-  static Future<String> get tRexRunnerCss =>
-      PlatformInAppWebViewController.static().tRexRunnerCss;
+  static Future<String> get tRexRunnerCss => PlatformInAppWebViewController.static().tRexRunnerCss;
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.getViewId}
   dynamic getViewId() => platform.getViewId();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.dispose}
-  void dispose({bool isKeepAlive = false}) =>
-      platform.dispose(isKeepAlive: isKeepAlive);
+  void dispose({bool isKeepAlive = false}) => platform.dispose(isKeepAlive: isKeepAlive);
 }

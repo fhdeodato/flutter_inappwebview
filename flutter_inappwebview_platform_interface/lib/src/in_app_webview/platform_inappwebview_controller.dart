@@ -1045,7 +1045,7 @@ abstract class PlatformInAppWebViewController extends PlatformInterface
         'getHitTestResult is not implemented on the current platform');
   }
 
-  Future<void> requestFocus() {
+  Future<bool> requestFocus() {
     throw UnimplementedError(
         'requestFocus is not implemented on the current platform');
   }

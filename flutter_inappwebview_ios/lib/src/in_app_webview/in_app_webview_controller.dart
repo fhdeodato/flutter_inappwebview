@@ -2235,7 +2235,7 @@ class IOSInAppWebViewController extends PlatformInAppWebViewController
   }
 
   @override
-  Future<void> requestFocus() async {
+  Future<bool> requestFocus() async {
     Map<String, dynamic> args = <String, dynamic>{};
     return await channel?.invokeMethod('requestFocus', args);
   }
