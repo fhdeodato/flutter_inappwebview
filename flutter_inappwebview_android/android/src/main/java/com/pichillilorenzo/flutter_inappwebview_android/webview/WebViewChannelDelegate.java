@@ -476,8 +476,8 @@ public class WebViewChannelDelegate extends ChannelDelegateImpl {
         break;
       case requestFocus:
         if (webView != null) {
-          boolean isFocused = webView.requestFocus();
-           result.success(isFocused);
+          webView.requestFocus();
+          result.success(true);
         } else {
           result.success(false);
         }

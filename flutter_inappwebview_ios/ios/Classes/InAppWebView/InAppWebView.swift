@@ -608,7 +608,6 @@ public class InAppWebView: WKWebView, UIScrollViewDelegate, WKUIDelegate,
             }
             
             if settings.allowFileAccessFromFileURLs {
-                configuration.preferences.setValue(settings.allowFileAccessFromFileURLs, forKey: "allowFileAccessFromFileURLs")
             }
             
             if #available(iOS 9.0, *) {
